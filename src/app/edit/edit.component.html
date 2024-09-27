@@ -1,0 +1,16 @@
+<div class="post-container">
+    <div *ngIf="post">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input id="title" [(ngModel)]="post.title" class="form-control" />
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="body">Conent:</label>
+        <textarea id="body" [(ngModel)]="post.body" class="form-control"></textarea>
+        <br>
+      </div>
+      <button (click)="onUpdate()" class="btn btn-success">Save changes <i class="bi bi-floppy2"></i></button>
+    </div>
+  </div>
+  

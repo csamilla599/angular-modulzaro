@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="logo-container text-center">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="noSubmit()">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input id="username" formControlName="username" class="form-control" placeholder="&#xF4E1;"/>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" class="form-control" placeholder="&#xF47B;"/>
+    </div>
+    <br>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="rememberCheckbox">
+      <label class="form-check-label" for="rememberCheckbox">Remember me</label>
+    </div>
+    <br>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="registerCheckbox" (change)="toggleRegister($event)">
+      <label class="form-check-label" for="registerCheckbox">Not a member yet?</label>
+    </div>
+    <br>
+    <div *ngIf="showRegister">
+      <a [routerLink]="['/create']">Click here</a>
+    </div>
+    <div class="entry-component">
+    <div class="d-flex justify-content-center">
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-twitch"></i>
+      <i class="bi bi-instagram"></i>
+    </div>
+  </div>
+    <br>
+    <div class="button-container">
+      <button type="submit" class="btn">Login</button>
+    </div>
+  </form>
+</div>
+
+

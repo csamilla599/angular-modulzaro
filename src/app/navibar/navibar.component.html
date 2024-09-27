@@ -1,0 +1,25 @@
+<div class="navibar">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <img src="assets/pikachu.png" alt="">
+      <a class="navbar-brand" href="#">Angular modulzáró</a>
+      <img src="assets/gengar.png" alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/']"><i class="bi bi-house"></i> Home</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/posts']"><i class="bi bi-file-post"></i> Posts</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/create']"><i class="bi bi-person-plus"></i> SignUp</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
